@@ -1,0 +1,17 @@
+/health-insurance-analysis
+│
+├── /data
+│   └── insurance_data.csv   # Dados brutos do seguro de saúde
+│
+├── /notebooks
+│   └── EDA_and_modeling.ipynb   # Notebook Jupyter contendo a análise e o modelo
+│
+├── /src
+│   ├── eda.py                   # Script para análise exploratória de dados
+│   ├── modeling.py               # Script para criação do modelo de regressão linear
+│   └── hypothesis_testing.py     # Script para realizar os testes de hipótese
+│
+├── .gitignore                    # Arquivo para ignorar arquivos desnecessários no Git
+├── requirements.txt              # Dependências do projeto
+├── README.md                     # Descrição do projeto e instruções
+└── LICENSE                       # Licença do projeto
