@@ -1,0 +1,12 @@
+Instruções para Execução
+
+Análise Exploratória de Dados: O arquivo EDA_and_modeling.ipynb contém a análise visual e estatística completa dos dados. Execute o notebook para gerar gráficos e insights.
+
+Testes de Hipóteses: O script hypothesis_testing.py realiza os testes de hipótese para verificar diferenças entre grupos de clientes (fumantes vs. não fumantes, homens vs. mulheres).
+
+Modelagem de Regressão: O script modeling.py constrói o modelo de regressão linear para prever os encargos de seguro.
+
+Resultados
+Gráficos que mostram a distribuição das variáveis e as correlações entre elas.
+Testes de hipótese que mostram diferenças significativas entre grupos de clientes.
+Modelo de regressão linear com métricas de avaliação como R² e erro médio quadrático (MSE).
