@@ -1,0 +1,33 @@
+import pandas as pd
+import numpy as np
+
+# Definir os tamanhos do dataset
+num_rows = 1000
+
+# Gerar os dados sintéticos
+np.random.seed(42)
+idade = np.random.randint(18, 65, num_rows)
+sexo = np.random.choice(['masculino', 'feminino'], num_rows)
+imc = np.round(np.random.uniform(18.5, 40, num_rows), 1)
+filhos = np.random.randint(0, 5, num_rows)
+fumante = np.random.choice(['sim', 'nao'], num_rows)
+regiao = np.random.choice(['norte', 'sul', 'leste', 'oeste'], num_rows)
+# Gerar encargos com base em uma função que depende de idade, imc e se o segurado é fumante
+encargos = np.round(2000 + idade * 100 + imc * 150 + np.where(fumante == 'sim', 5000, 0) + filhos * 400 + np.random.normal(0, 500, num_rows), 2)
+
+# Criar DataFrame
+df = pd.DataFrame({
+    'idade': idade,
+    'sexo': sexo,
+    'imc': imc,
+    'filhos': filhos,
+    'fumante': fumante,
+    'regiao': regiao,
+    'encargos': encargos
+})
+
+# Salvar o dataset como CSV
+file_path = '/mnt/data/AnaliseSeguroSaude.csv'
+df.to_csv(file_path, index=False)
+
+file_path
